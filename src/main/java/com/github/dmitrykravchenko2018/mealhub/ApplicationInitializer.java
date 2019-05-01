@@ -1,6 +1,6 @@
-package org.mealhub;
+package com.github.dmitrykravchenko2018.mealhub;
 
-import org.mealhub.config.SpringConfiguration;
+import com.github.dmitrykravchenko2018.mealhub.config.SpringConfiguration;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class ApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {

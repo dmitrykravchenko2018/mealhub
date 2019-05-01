@@ -1,4 +1,4 @@
-package org.mealhub.controller;
+package com.github.dmitrykravchenko2018.mealhub.controller;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
