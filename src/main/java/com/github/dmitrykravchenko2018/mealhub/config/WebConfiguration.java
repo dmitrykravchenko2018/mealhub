@@ -7,5 +7,5 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @Configuration
 @EnableWebMvc
 @ComponentScan("com.github.dmitrykravchenko2018.mealhub")
-public class SpringConfiguration {
+public class WebConfiguration {
 }

@@ -1,19 +1,23 @@
 package com.github.dmitrykravchenko2018.mealhub;
 
-import com.github.dmitrykravchenko2018.mealhub.config.SpringConfiguration;
+import com.github.dmitrykravchenko2018.mealhub.config.JPAConfiguration;
+import com.github.dmitrykravchenko2018.mealhub.config.WebConfiguration;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class ApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[0];
+        final Class<?>[] rootConfigClasses = {
+                JPAConfiguration.class
+        };
+        return rootConfigClasses;
     }
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
         final Class<?>[] servletConfigClasses = {
-                SpringConfiguration.class
+                WebConfiguration.class
         };
         return servletConfigClasses;
     }
