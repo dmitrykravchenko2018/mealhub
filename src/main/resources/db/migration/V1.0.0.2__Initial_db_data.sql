@@ -1,0 +1,2 @@
+INSERT INTO mealhub.user_entity (username, password, email) VALUES ('admin', 'arkan', 'arkan@ddf.ff');
+INSERT INTO mealhub.user_entity (username, password, email) VALUES ('alex', 'alex', 'alex@ddf.ff');

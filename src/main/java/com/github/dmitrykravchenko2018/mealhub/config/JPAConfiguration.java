@@ -1,8 +1,10 @@
 package com.github.dmitrykravchenko2018.mealhub.config;
 
+import org.flywaydb.core.Flyway;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.DependsOn;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -59,6 +61,7 @@ public class JPAConfiguration {
     }
 
     @Bean
+    @DependsOn("flyway")
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource, JpaVendorAdapter jpaVendorAdapter) {
         LocalContainerEntityManagerFactoryBean entityManagerFactory = new LocalContainerEntityManagerFactoryBean();
 
@@ -81,5 +84,18 @@ public class JPAConfiguration {
     public JpaVendorAdapter jpaVendorAdapter() {
         return new HibernateJpaVendorAdapter();
     }
+
+    @Bean(initMethod = "migrate")
+    @DependsOn("dataSource")
+    public Flyway flyway(DataSource dataSource) {
+
+        return Flyway.configure()
+                .dataSource(dataSource)
+                .baselineOnMigrate(true)
+                .schemas(schema)
+                .locations("classpath:/db.migration")
+                .load();
+    }
+
 
 }
