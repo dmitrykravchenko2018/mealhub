@@ -23,7 +23,7 @@
         <lombok.version>1.18.8</lombok.version>
 
         <spring.version>5.2.3.RELEASE</spring.version>
-        <spring.data.version>2.1.8.RELEASE</spring.data.version>
+        <spring.data.version>2.1.9.RELEASE</spring.data.version>
         <postgresql.version>42.4.1</postgresql.version>
         <hibernate.version>5.4.24.Final</hibernate.version>
         <flyway.version>5.2.4</flyway.version>
