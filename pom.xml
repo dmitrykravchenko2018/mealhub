@@ -19,7 +19,7 @@
         <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
 
         <junit.version>4.13.1</junit.version>
-        <jackson.version>2.12.6.1</jackson.version>
+        <jackson.version>2.13.4.1</jackson.version>
         <lombok.version>1.18.8</lombok.version>
 
         <spring.version>5.2.21.RELEASE</spring.version>
