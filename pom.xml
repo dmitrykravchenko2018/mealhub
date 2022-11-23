@@ -24,7 +24,7 @@
 
         <spring.version>5.2.21.RELEASE</spring.version>
         <spring.data.version>2.1.9.RELEASE</spring.data.version>
-        <postgresql.version>42.4.1</postgresql.version>
+        <postgresql.version>42.4.3</postgresql.version>
         <hibernate.version>5.4.24.Final</hibernate.version>
         <flyway.version>5.2.4</flyway.version>
 
